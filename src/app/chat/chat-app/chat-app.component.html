@@ -1,0 +1,17 @@
+<div style="width: 100%; max-width: 350px; margin: 50px auto; background: #fff;">
+  <form>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" (click)="submitToDoForm($event)">Create</button>
+      <br>
+      <br>
+      <input class="form-control" [(ngModel)]="content" id="content" [ngModelOptions]="{standalone: true}" autocomplete="off">
+      <small id="contentHelp" class="form-text text-muted">Please Input Chat Contents.</small>
+    </div>
+  </form>
+<div *ngFor= "let talk of talks">
+  {{talk.showContent()}}
+<br>
+<br>
+</div>
+
+</div>
